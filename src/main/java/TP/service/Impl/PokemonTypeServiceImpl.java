@@ -2,7 +2,6 @@ package TP.service.Impl;
 
 import TP.entity.PokemonType;
 import TP.service.PokemonTypeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

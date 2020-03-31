@@ -2,9 +2,11 @@ package TP.repository.Impl;
 
 import TP.bo.Battle;
 import TP.repository.BattleRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class BattleRepositoryImpl implements BattleRepository {
 
     private Map<UUID,Battle> battles = new HashMap<>();

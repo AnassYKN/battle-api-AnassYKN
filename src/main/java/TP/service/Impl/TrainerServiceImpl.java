@@ -5,12 +5,15 @@ import TP.entity.Trainer;
 import TP.service.PokemonTypeService;
 import TP.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class TrainerServiceImpl implements TrainerService {
 
     private RestTemplate restTemplate;
@@ -48,12 +51,14 @@ public class TrainerServiceImpl implements TrainerService {
 
     }
 
+
     @Autowired
+    @Qualifier("trainerApiRestTemplate")
     public void setRestTemplate(RestTemplate restTemplate) {
         this.restTemplate=restTemplate;
     }
 
-    @Value("https://trainer-api-anassykn.herokuapp.com")
+    @Value("${trainer.service.url}")
     public void setTrainerServiceUrl(String TrainerUrl) {
         this.TrainerUrl = TrainerUrl;
     }

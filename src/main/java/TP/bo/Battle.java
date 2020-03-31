@@ -9,8 +9,14 @@ public class Battle {
     BattleTrainer opponent;
 
 
-    public Battle(java.util.UUID UUID) {
+    public Battle(UUID UUID) {
         this.UUID = UUID;
+    }
+
+    public Battle(UUID uuid, BattleTrainer btrainer1, BattleTrainer btrainer2) {
+        this.UUID=uuid;
+        this.trainer=btrainer1;
+        this.trainer=btrainer2;
     }
 
     public java.util.UUID getUUID() {

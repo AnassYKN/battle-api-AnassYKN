@@ -10,5 +10,5 @@ public interface BattleService {
 
     Pair<UUID, Battle> createBattle(String trainer, String opponent);
     List<Battle> getAllBattles();
-
+    Battle getBattleByUUID(UUID uuid);
 }
