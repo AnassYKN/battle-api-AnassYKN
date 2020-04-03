@@ -13,6 +13,7 @@ import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.UUID;
 
@@ -56,12 +57,14 @@ public class BattleServiceImpl implements BattleService {
         btrainer1.setTeam(lptrainer1);
         btrainer2.setTeam(lptrainer2);
 
-        return Pair.of(uuid,battleRepository.createBattle(new Battle(uuid,btrainer1,btrainer2)));
+        Battle battle = battleRepository.createBattle(new Battle(uuid,btrainer1,btrainer2));
+
+        return Pair.of(uuid,battle);
 
     }
 
     @Override
-    public List<Battle> getAllBattles() {
+    public HashSet<Battle> getAllBattles() {
         return this.battleRepository.getAllBattles();
     }
 

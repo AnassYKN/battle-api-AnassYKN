@@ -28,7 +28,7 @@ public class BattleRepositoryImpl implements BattleRepository {
     }
 
     @Override
-    public List<Battle> getAllBattles() {
-        return (List<Battle>) new HashSet<Battle>(battles.values());
+    public HashSet<Battle> getAllBattles() {
+        return new HashSet<Battle>(battles.values());
     }
 }

@@ -16,7 +16,7 @@ public class Battle {
     public Battle(UUID uuid, BattleTrainer btrainer1, BattleTrainer btrainer2) {
         this.UUID=uuid;
         this.trainer=btrainer1;
-        this.trainer=btrainer2;
+        this.opponent=btrainer2;
     }
 
     public java.util.UUID getUUID() {

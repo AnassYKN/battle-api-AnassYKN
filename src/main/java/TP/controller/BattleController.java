@@ -8,7 +8,7 @@ import org.springframework.data.util.Pair;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.HashSet;
 import java.util.UUID;
 
 @RestController
@@ -19,8 +19,7 @@ public class BattleController {
     BattleServiceImpl battleService;
 
     @GetMapping("/")
-    public ResponseEntity<List<Battle>> getAllBattles() {
-
+    public ResponseEntity<HashSet<Battle>> getAllBattles() {
         return ResponseEntity.status(200).body(battleService.getAllBattles());
     }
 
@@ -32,7 +31,6 @@ public class BattleController {
     @PostMapping("/")
     public ResponseEntity<Pair<UUID, Battle>> postBattle(@RequestParam String trainer, @RequestParam String opponent) {
         return  ResponseEntity.status(200).body(battleService.createBattle(trainer, opponent));
-
     }
 
 
