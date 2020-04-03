@@ -9,7 +9,7 @@ import java.util.UUID;
 
 
 public interface BattleRepository {
-    UUID createBattle(Battle battle);
+    Battle createBattle(Battle battle);
     Battle getBattleByUUID(UUID uuid);
     List<Battle> getAllBattles();
 }

@@ -12,9 +12,9 @@ public class BattleRepositoryImpl implements BattleRepository {
     private Map<UUID,Battle> battles = new HashMap<>();
 
     @Override
-    public UUID createBattle(Battle battle) {
+    public Battle createBattle(Battle battle) {
             battles.put(battle.getUUID(),battle);
-            return battle.getUUID();
+            return battle;
     }
 
     @Override

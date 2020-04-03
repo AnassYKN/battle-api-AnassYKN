@@ -3,6 +3,7 @@ package TP.entity;
 import java.util.List;
 
 public class PokemonType {
+    private int pokemonTypeId;
     private int id;
     private int level;
     private int baseExperience;
@@ -13,23 +14,66 @@ public class PokemonType {
     private int weight;
     private List<String> types;
 
-    public int getPokemonTypeId() {return id; }
+    public PokemonType(int pokemonTypeId, int id, int level, int baseExperience, int height, String name, Sprites sprites, Stats stats, int weight, List<String> types) {
+        this.pokemonTypeId = pokemonTypeId;
+        this.id = id;
+        this.level = level;
+        this.baseExperience = baseExperience;
+        this.height = height;
+        this.name = name;
+        this.sprites = sprites;
+        this.stats = stats;
+        this.weight = weight;
+        this.types = types;
+    }
 
-    public void setPokemonTypeId(int id) {this.id = id;}
+    public PokemonType() {}
 
-    public int getLevel() { return level;}
 
-    public void setLevel(int level) { this.level = level; }
 
-    public int getBaseExperience() { return baseExperience; }
+    public int getPokemonTypeId() {
+        return pokemonTypeId;
+    }
 
-    public void setBaseExperience(int baseExperience) { this.baseExperience = baseExperience; }
+    public void setPokemonTypeId(int pokemonTypeId) {
+        this.pokemonTypeId = pokemonTypeId;
+    }
 
-    public int getHeight() { return height; }
+    public int getId() {
+        return id;
+    }
 
-    public void setHeight(int height) { this.height = height; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public String getName() { return name; }
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getBaseExperience() {
+        return baseExperience;
+    }
+
+    public void setBaseExperience(int baseExperience) {
+        this.baseExperience = baseExperience;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;

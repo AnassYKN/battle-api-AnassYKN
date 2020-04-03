@@ -12,7 +12,7 @@ public class StatsCalculator {
     }
 
     public int calculateHP(int baseStat, int level){
-        return 10 + level + ( baseStat * ( level / 50));
+        return (10 + level + ( baseStat * ( level / 50)));
     }
 
 }

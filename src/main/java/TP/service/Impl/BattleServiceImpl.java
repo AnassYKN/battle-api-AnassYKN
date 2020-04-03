@@ -47,13 +47,16 @@ public class BattleServiceImpl implements BattleService {
         List<BattlePokemon> lptrainer1 = new ArrayList<>();
         List<BattlePokemon> lptrainer2 = new ArrayList<>();
 
-        trainer1.getTeam().forEach(pokemonType -> lptrainer1.add(this.battlePokemonFactory.createBattlePokemon(pokemonType,pokemonType.getLevel())));
-        trainer2.getTeam().forEach(pokemonType -> lptrainer2.add(this.battlePokemonFactory.createBattlePokemon(pokemonType,pokemonType.getLevel())));
+
+        trainer1.getTeam().forEach(pokemonType ->
+                                   lptrainer1.add(battlePokemonFactory.createBattlePokemon(pokemonType,pokemonType.getLevel())));
+        trainer2.getTeam().forEach(pokemonType ->
+                                   lptrainer2.add(battlePokemonFactory.createBattlePokemon(pokemonType,pokemonType.getLevel())));
 
         btrainer1.setTeam(lptrainer1);
         btrainer2.setTeam(lptrainer2);
 
-        return Pair.of(uuid,new Battle(uuid,btrainer1,btrainer2));
+        return Pair.of(uuid,battleRepository.createBattle(new Battle(uuid,btrainer1,btrainer2)));
 
     }
 

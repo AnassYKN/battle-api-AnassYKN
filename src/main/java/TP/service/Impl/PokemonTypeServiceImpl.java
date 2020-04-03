@@ -2,6 +2,7 @@ package TP.service.Impl;
 
 import TP.entity.PokemonType;
 import TP.service.PokemonTypeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -26,7 +27,7 @@ public class PokemonTypeServiceImpl implements PokemonTypeService {
         return List.of(listPokemon);
     }
 
-
+    @Autowired
     public void setRestTemplate(RestTemplate restTemplate) {
         this.restTemplate=restTemplate;
     }
