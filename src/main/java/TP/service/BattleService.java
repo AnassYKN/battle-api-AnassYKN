@@ -11,4 +11,5 @@ public interface BattleService {
     Pair<UUID, Battle> createBattle(String trainer, String opponent);
     HashSet<Battle> getAllBattles();
     Battle getBattleByUUID(UUID uuid);
+    Battle attackBattle(UUID uuid, String trainerName);
 }

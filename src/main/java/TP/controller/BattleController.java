@@ -33,5 +33,10 @@ public class BattleController {
         return  ResponseEntity.status(200).body(battleService.createBattle(trainer, opponent));
     }
 
+    @PostMapping("/{uuid}/{trainerName}/attack")
+    public ResponseEntity<Battle> attackBattle(@PathVariable UUID uuid, @PathVariable String trainerName) throws Exception {
+        return ResponseEntity.status(200).body(battleService.attackBattle(uuid,trainerName));
+    }
+
 
 }

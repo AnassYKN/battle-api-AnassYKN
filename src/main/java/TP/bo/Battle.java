@@ -13,6 +13,8 @@ public class Battle {
         this.UUID = UUID;
     }
 
+    public Battle(){}
+
     public Battle(UUID uuid, BattleTrainer btrainer1, BattleTrainer btrainer2) {
         this.UUID=uuid;
         this.trainer=btrainer1;

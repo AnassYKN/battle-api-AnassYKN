@@ -29,6 +29,8 @@ public class BattlePokemonFactory {
         battlePokemon.setDefense(statsCalculator.calculateStat(battlePokemon.getPokemonType().getStats().getDefense(),level));
         battlePokemon.setAttack(statsCalculator.calculateStat(battlePokemon.getPokemonType().getStats().getAttack(),level));
         battlePokemon.setLevel(pokemonType.getLevel());
+        battlePokemon.setAlive(true);
+        battlePokemon.setKo(false);
         return battlePokemon;
     }
 
