@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "b3f1e7f3-407a-4cdf-925c-95f6d1042bdb",
+		"name": "Battle-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Postcreatebattle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://battle-api-anassykn.herokuapp.com/battles/?trainer=Ash&opponent=Misty",
+					"protocol": "https",
+					"host": [
+						"battle-api-anassykn",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"battles",
+						""
+					],
+					"query": [
+						{
+							"key": "trainer",
+							"value": "Ash"
+						},
+						{
+							"key": "opponent",
+							"value": "Misty"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllBattles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://battle-api-anassykn.herokuapp.com/battles/",
+					"protocol": "https",
+					"host": [
+						"battle-api-anassykn",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"battles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Postattackbattle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://battle-api-anassykn.herokuapp.com/battles/cfd109eb-b838-4437-9923-4461f25edbb8/Misty/attack",
+					"protocol": "https",
+					"host": [
+						"battle-api-anassykn",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"battles",
+						"cfd109eb-b838-4437-9923-4461f25edbb8",
+						"Misty",
+						"attack"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
