@@ -1,28 +1,28 @@
 # Battle API Anass Yakine
 
-# Lancement
+# Launch
 
-```
-mvn clean install && mvn spring-boot:run
-```
-port de l'application en local : http://localhost:8084 <br/>
+`` ''
+mvn clean install && mvn spring-boot: run
+`` ''
+port of the application locally: http: // localhost: 8084 <br/>
 
 # Routes
 
-GET    : /battles/         :https://battle-api-anassykn.herokuapp.com/battles/<br/>
-POST   : /battles/?trainer=''&opponent='':https://battle-api-anassykn.herokuapp.com/battles/?trainer=Ash&opponent=Misty<br/>
-POST   : /battles/{UUID}/{trainerName}:https://trainer-api-anassykn.herokuapp.com/trainers/Bug%20Catcher<br/>
+GET: / battles /: https: //battle-api-anassykn.herokuapp.com/battles/ <br/>
+POST: /battles/?trainer=''&opponent='':https://battle-api-anassykn.herokuapp.com/battles/?trainer=Ash&opponent=Misty <br/>
+POST: /battles/{UUID[/{trainerNameName:https://trainer-api-anassykn.herokuapp.com/trainers/Bug%20Catcher <br/>
 
-# Déploiment
+# Deployment
 
-l'application est déployé sur l'adresse suivante : https://battle-api-anassykn.herokuapp.com/
+the application is deployed on the following address: https://battle-api-anassykn.herokuapp.com/
 
-# Swagger 
+# Swagger
 
-liste des routes est disponible sur le l'adresse suivante :https://battle-api-anassykn.herokuapp.com/swagger-ui.html#/
+list of routes is available at the following address: https: //battle-api-anassykn.herokuapp.com/swagger-ui.html#/
 
 # PostMan
 
-Battle-api.postman_collection.json pour testé les routes de l'api 
+Battle-api.postman_collection.json to test the API routes
 
 Battle-api-AnassYKN created by Anass Yakine
